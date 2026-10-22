@@ -1,0 +1,23 @@
+{
+  "name": "lane-law-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lane Law AI - ask India's Motor Vehicles Act. RAG with cited answers.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "eval": "node scripts/eval-retrieval.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.61.0",
+    "motion": "^14.6.0",
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

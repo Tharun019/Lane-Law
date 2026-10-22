@@ -1,0 +1,394 @@
+{
+ "summary": {
+  "generatedAt": "2026-10-22T09:45:37.645Z",
+  "chunks": 352,
+  "answerable": 10,
+  "hitAt1": 8,
+  "hitAt3": 10,
+  "refusalsCorrect": 2,
+  "refusalsGraded": 2,
+  "passed": 12,
+  "graded": 12
+ },
+ "rows": [
+  {
+   "question": "What is the fine for riding a bike without a helmet?",
+   "vehicle": "two-wheeler",
+   "expected": [
+    "pen2019-r25",
+    "mva1988-129"
+   ],
+   "top3": [
+    {
+     "id": "pen2019-r24",
+     "title": "Overloading of two-wheelers (more than two people / triple riding)",
+     "score": 58.737
+    },
+    {
+     "id": "pen2019-r25",
+     "title": "Driving (riding) without helmet",
+     "score": 53.154
+    },
+    {
+     "id": "mva1988-129",
+     "title": "Wearing of protective headgear",
+     "score": 48.039
+    }
+   ],
+   "firstHitRank": 2,
+   "gatePassed": true,
+   "answerable": true,
+   "pass": true,
+   "note": null
+  },
+  {
+   "question": "What is the penalty for drunk driving?",
+   "vehicle": "all",
+   "expected": [
+    "pen2019-r11",
+    "mva1988-185"
+   ],
+   "top3": [
+    {
+     "id": "mva1988-185",
+     "title": "Driving by a drunken person or by a person under the",
+     "score": 47.913
+    },
+    {
+     "id": "pen2019-r11",
+     "title": "Drunken driving",
+     "score": 30.709
+    },
+    {
+     "id": "mva1988-203",
+     "title": "Breath tests",
+     "score": 19.864
+    }
+   ],
+   "firstHitRank": 1,
+   "gatePassed": true,
+   "answerable": true,
+   "pass": true,
+   "note": null
+  },
+  {
+   "question": "What happens if I drive without a licence?",
+   "vehicle": "all",
+   "expected": [
+    "pen2019-r7",
+    "mva1988-181",
+    "mva1988-3"
+   ],
+   "top3": [
+    {
+     "id": "mva1988-177",
+     "title": "General provision for punishment of offences",
+     "score": 21.64
+    },
+    {
+     "id": "pen2019-r7",
+     "title": "Driving without licence",
+     "score": 21.54
+    },
+    {
+     "id": "mva1988-181",
+     "title": "Driving vehicles in contravention of section 3 or section 4",
+     "score": 21.288
+    }
+   ],
+   "firstHitRank": 2,
+   "gatePassed": true,
+   "answerable": true,
+   "pass": true,
+   "note": null
+  },
+  {
+   "question": "What is the fine for driving without insurance?",
+   "vehicle": "all",
+   "expected": [
+    "pen2019-r21",
+    "mva1988-196"
+   ],
+   "top3": [
+    {
+     "id": "pen2019-r21",
+     "title": "Driving uninsured vehicle (no insurance)",
+     "score": 40.972
+    },
+    {
+     "id": "mva1988-196",
+     "title": "Driving uninsured vehicle- Whoever drives a motor vehicle or causes",
+     "score": 26.901
+    },
+    {
+     "id": "mva1988-177",
+     "title": "General provision for punishment of offences",
+     "score": 21.64
+    }
+   ],
+   "firstHitRank": 1,
+   "gatePassed": true,
+   "answerable": true,
+   "pass": true,
+   "note": null
+  },
+  {
+   "question": "What should I do when an ambulance is coming behind me?",
+   "vehicle": "all",
+   "expected": [
+    "pen2019-r19",
+    "mvdr2017-27"
+   ],
+   "top3": [
+    {
+     "id": "pen2019-r19",
+     "title": "Failing to draw to the side of the road on the approach of a fire service vehicle, an ambulance or other emergency vehicle specified by the State Government",
+     "score": 26.62
+    },
+    {
+     "id": "mvdr2017-27",
+     "title": "Vehicles designated for emergency duties",
+     "score": 23.992
+    },
+    {
+     "id": "mva1988-138",
+     "title": "Power of State Government to make rules",
+     "score": 7.496
+    }
+   ],
+   "firstHitRank": 1,
+   "gatePassed": true,
+   "answerable": true,
+   "pass": true,
+   "note": null
+  },
+  {
+   "question": "Can three people ride on a scooter?",
+   "vehicle": "two-wheeler",
+   "expected": [
+    "pen2019-r24",
+    "mva1988-128"
+   ],
+   "top3": [
+    {
+     "id": "pen2019-r24",
+     "title": "Overloading of two-wheelers (more than two people / triple riding)",
+     "score": 47.198
+    },
+    {
+     "id": "mvdr2017-5",
+     "title": "Duties of drivers and riders",
+     "score": 33.755
+    },
+    {
+     "id": "mva1988-128",
+     "title": "Safety measures for drivers and pillion riders",
+     "score": 32.324
+    }
+   ],
+   "firstHitRank": 1,
+   "gatePassed": true,
+   "answerable": true,
+   "pass": true,
+   "note": null
+  },
+  {
+   "question": "Is it allowed to use a mobile phone while driving?",
+   "vehicle": "all",
+   "expected": [
+    "mvdr2017-37"
+   ],
+   "top3": [
+    {
+     "id": "mvdr2017-37",
+     "title": "Use of mobile telephones and communication devices",
+     "score": 52.243
+    },
+    {
+     "id": "pen2019-r18",
+     "title": "Violation of safety measures for motor cycle drivers and pillion riders, refusal to stop and submit vehicle for weighing, use of phones in silent zones and failure to allow free passage to emergency vehicles",
+     "score": 15.769
+    },
+    {
+     "id": "mvdr2017-5",
+     "title": "Duties of drivers and riders",
+     "score": 9.302
+    }
+   ],
+   "firstHitRank": 1,
+   "gatePassed": true,
+   "answerable": true,
+   "pass": true,
+   "note": null
+  },
+  {
+   "question": "When am I allowed to overtake another vehicle?",
+   "vehicle": "all",
+   "expected": [
+    "mvdr2017-14"
+   ],
+   "top3": [
+    {
+     "id": "mvdr2017-14",
+     "title": "Overtaking",
+     "score": 18.971
+    },
+    {
+     "id": "mvdr2017-4",
+     "title": "Use of roads by vehicles",
+     "score": 6.96
+    },
+    {
+     "id": "mvdr2017-11",
+     "title": "Indication of signals",
+     "score": 6.939
+    }
+   ],
+   "firstHitRank": 1,
+   "gatePassed": true,
+   "answerable": true,
+   "pass": true,
+   "note": null
+  },
+  {
+   "question": "Fine for not wearing a seat belt in a car",
+   "vehicle": "four-wheeler",
+   "expected": [
+    "pen2019-r16"
+   ],
+   "top3": [
+    {
+     "id": "pen2019-r16",
+     "title": "Driving a motor vehicle without wearing a safety belt (seat belt), or carrying passengers not wearing seat belts",
+     "score": 81.611
+    },
+    {
+     "id": "pen2019-r17",
+     "title": "Driving a motor vehicle with a child under fourteen years of age who is not secured by a safety belt or a child restraint system",
+     "score": 42.26
+    },
+    {
+     "id": "mvdr2017-5",
+     "title": "Duties of drivers and riders",
+     "score": 28.187
+    }
+   ],
+   "firstHitRank": 1,
+   "gatePassed": true,
+   "answerable": true,
+   "pass": true,
+   "note": null
+  },
+  {
+   "question": "What must a driver do after an accident where someone is hurt?",
+   "vehicle": "all",
+   "expected": [
+    "mva1988-134",
+    "mvdr2017-29"
+   ],
+   "top3": [
+    {
+     "id": "mvdr2017-29",
+     "title": "Action in case of vehicular accident",
+     "score": 17.543
+    },
+    {
+     "id": "mva1988-147",
+     "title": "Requirement of policies and limits of liability",
+     "score": 12.62
+    },
+    {
+     "id": "mvdr2017-29",
+     "title": "Action in case of vehicular accident",
+     "score": 12.349
+    }
+   ],
+   "firstHitRank": 1,
+   "gatePassed": true,
+   "answerable": true,
+   "pass": true,
+   "note": null
+  },
+  {
+   "question": "How do I make biryani?",
+   "vehicle": "all",
+   "expected": [],
+   "top3": [
+    {
+     "id": "mva1988-137",
+     "title": "Power of Central Government to make rules",
+     "score": 3.012
+    },
+    {
+     "id": "mva1988-176",
+     "title": "Power of State Government to make rules",
+     "score": 2.892
+    },
+    {
+     "id": "mva1988-107",
+     "title": "Power of State Government to make rules",
+     "score": 2.841
+    }
+   ],
+   "firstHitRank": null,
+   "gatePassed": false,
+   "answerable": false,
+   "pass": true,
+   "note": null
+  },
+  {
+   "question": "Who is the transport minister of Karnataka?",
+   "vehicle": "all",
+   "expected": [],
+   "top3": [
+    {
+     "id": "mva1988-68",
+     "title": "Transport Authorities",
+     "score": 2.863
+    },
+    {
+     "id": "mva1988-68",
+     "title": "Transport Authorities",
+     "score": 2.838
+    },
+    {
+     "id": "mva1988-101",
+     "title": "Operation of additional services by a State transport",
+     "score": 2.816
+    }
+   ],
+   "firstHitRank": null,
+   "gatePassed": false,
+   "answerable": false,
+   "pass": true,
+   "note": null
+  },
+  {
+   "question": "Which insurance company is cheapest?",
+   "vehicle": "all",
+   "expected": [],
+   "top3": [
+    {
+     "id": "mva1988-150",
+     "title": "Rights of third parties against insurers on insolvency of",
+     "score": 18.04
+    },
+    {
+     "id": "mva1988-146",
+     "title": "Necessity for insurance against third party risk",
+     "score": 17.978
+    },
+    {
+     "id": "mva1988-152",
+     "title": "Settlement between insurers and insured persons",
+     "score": 16.003
+    }
+   ],
+   "firstHitRank": null,
+   "gatePassed": true,
+   "answerable": false,
+   "pass": null,
+   "note": "Retrieval finds insurance sections; the LLM must refuse (tests grounding)."
+  }
+ ]
+}
