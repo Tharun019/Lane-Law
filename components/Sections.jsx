@@ -38,7 +38,7 @@ function Heading({ kicker, title, sub }) {
       transition={{ duration: 0.8, ease }}
       className="mb-10"
     >
-      <p className="font-mono text-xs uppercase tracking-[0.25em] text-cyan-300/80">{kicker}</p>
+      <p className="font-mono text-xs uppercase tracking-[0.25em] text-amber-300/80">{kicker}</p>
       <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl">{title}</h2>
       {sub && <p className="mt-4 max-w-2xl leading-relaxed text-slate-400">{sub}</p>}
     </motion.div>
@@ -65,16 +65,16 @@ export function Coverage() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, ease, delay: i * 0.12 }}
             whileHover={{ y: -6 }}
-            className="glass group relative overflow-hidden rounded-3xl p-6 transition-shadow hover:shadow-[0_30px_80px_-30px_rgba(34,211,238,0.45)]"
+            className="glass group relative overflow-hidden rounded-3xl p-6 transition-shadow hover:shadow-[0_30px_80px_-30px_rgba(251,191,36,0.45)]"
           >
-            <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-cyan-400/10 blur-2xl transition group-hover:bg-cyan-400/20" />
+            <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-amber-400/10 blur-2xl transition group-hover:bg-amber-400/20" />
             <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/5">
-              <d.icon className="h-5 w-5 text-cyan-300" />
+              <d.icon className="h-5 w-5 text-amber-300" />
             </span>
             <h3 className="mt-5 font-display text-lg font-semibold text-white">{d.title}</h3>
-            <p className="mt-1 font-mono text-[11px] text-cyan-200/70">{d.meta}</p>
+            <p className="mt-1 font-mono text-[11px] text-amber-200/70">{d.meta}</p>
             <p className="mt-3 text-sm leading-relaxed text-slate-400">{d.body}</p>
-            <span className="mt-4 inline-flex items-center gap-1 text-xs text-cyan-300/80">
+            <span className="mt-4 inline-flex items-center gap-1 text-xs text-amber-300/80">
               Open official copy <ExternalLink className="h-3 w-3" />
             </span>
           </motion.a>
@@ -154,7 +154,7 @@ export function Evaluation() {
                   <td className="px-5 py-3 text-xs text-slate-400">
                     {r.answerable || r.gatePassed ? (
                       <>
-                        <span className="font-mono text-cyan-200/80">{r.top3[0]?.id}</span> · {r.top3[0]?.title?.slice(0, 48)}
+                        <span className="font-mono text-amber-200/80">{r.top3[0]?.id}</span> · {r.top3[0]?.title?.slice(0, 48)}
                       </>
                     ) : (
                       <span className="text-slate-500">blocked by retrieval gate</span>
@@ -163,7 +163,7 @@ export function Evaluation() {
                   <td className="px-5 py-3 font-mono text-xs text-slate-400">{r.firstHitRank ?? "—"}</td>
                   <td className="px-5 py-3">
                     {r.pass === null ? (
-                      <span className="inline-flex items-center gap-1 text-xs text-amber-200">
+                      <span className="inline-flex items-center gap-1 text-xs text-orange-200">
                         <Radio className="h-3.5 w-3.5" /> LLM must refuse
                       </span>
                     ) : r.pass ? (
@@ -193,7 +193,7 @@ export function Evaluation() {
             transition={{ duration: 0.7, ease, delay: i * 0.1 }}
             className="glass rounded-3xl p-6"
           >
-            <p className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-amber-200/80">
+            <p className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-orange-200/80">
               <AlertTriangle className="h-3.5 w-3.5" /> Failure case {i + 1}
             </p>
             <h3 className="mt-3 font-display text-lg font-semibold text-white">{f.title}</h3>
@@ -218,7 +218,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-4 text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
         <p>
           <span className="font-display text-sm font-semibold text-slate-300">
-            Lane Law <span className="text-cyan-300">AI</span>
+            Lane Law <span className="text-amber-300">AI</span>
           </span>{" "}
           · Built for the GAT AIML Hack Hour “From Text to Insight”, 22 Oct 2026.
         </p>

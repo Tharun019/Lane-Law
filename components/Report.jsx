@@ -9,7 +9,7 @@ import { OFFICIAL_LINKS } from "@/lib/situations";
 
 const sev = {
   high: ["High risk", "border-rose-400/30 bg-rose-400/10 text-rose-200"],
-  medium: ["Medium risk", "border-amber-300/30 bg-amber-300/10 text-amber-200"],
+  medium: ["Medium risk", "border-orange-300/30 bg-orange-300/10 text-orange-200"],
   low: ["Low risk", "border-emerald-300/30 bg-emerald-300/10 text-emerald-200"],
 };
 
@@ -22,7 +22,7 @@ function Block({ icon: Icon, title, children, i = 0 }) {
       className="glass rounded-2xl p-5"
     >
       <h4 className="mb-3.5 flex items-center gap-2 font-display text-sm font-semibold uppercase tracking-[0.14em] text-slate-300">
-        <Icon className="h-4 w-4 text-cyan-300" /> {title}
+        <Icon className="h-4 w-4 text-amber-300" /> {title}
       </h4>
       {children}
     </motion.section>
@@ -32,7 +32,7 @@ function Block({ icon: Icon, title, children, i = 0 }) {
 function Item({ text, cite, general, onCite }) {
   return (
     <div className="flex gap-2.5 text-sm leading-relaxed text-slate-300">
-      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300/70" />
+      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-300/70" />
       <div>
         <CiteText text={`${text} ${cite || ""}`.trim()} onCite={onCite} />
         {general && <span className="mt-1 inline-block rounded border border-white/10 px-1.5 text-[10px] text-slate-500">general advice — not from the documents</span>}
@@ -56,10 +56,10 @@ export default function Report({ data, id = "rep" }) {
         transition={{ duration: 0.6, ease }}
         className="glass-strong relative overflow-hidden rounded-2xl p-6"
       >
-        <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-cyan-400/15 blur-3xl" />
+        <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-amber-400/15 blur-3xl" />
         <div className="flex flex-wrap items-center gap-2">
           {r.found ? (
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-2.5 py-1 text-xs font-medium text-cyan-100">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-300/30 bg-amber-300/10 px-2.5 py-1 text-xs font-medium text-amber-100">
               <CheckCircle2 className="h-3.5 w-3.5" /> Found in the law
             </span>
           ) : (
@@ -80,11 +80,11 @@ export default function Report({ data, id = "rep" }) {
         <h3 className="mt-4 font-display text-2xl font-semibold leading-snug text-white">{r.headline}</h3>
         <CiteText text={r.understanding} onCite={focus} className="mt-3 text-[15px] leading-relaxed text-slate-300" />
         {data.facts?.length > 0 && (
-          <div className="mt-4 rounded-xl border border-amber-300/20 bg-amber-300/[0.06] p-3.5">
-            <p className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-amber-200">
+          <div className="mt-4 rounded-xl border border-orange-300/20 bg-orange-300/[0.06] p-3.5">
+            <p className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-orange-200">
               <AlertTriangle className="h-3.5 w-3.5" /> Flags from your profile
             </p>
-            <ul className="space-y-1 text-xs text-amber-100/80">
+            <ul className="space-y-1 text-xs text-orange-100/80">
               {data.facts.map((f) => (
                 <li key={f}>• {f}</li>
               ))}
@@ -117,7 +117,7 @@ export default function Report({ data, id = "rep" }) {
             <ol className="space-y-2.5">
               {r.process.map((x, i) => (
                 <li key={i} className="flex gap-3 text-sm text-slate-300">
-                  <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full border border-cyan-300/40 font-mono text-[10px] text-cyan-200">{i + 1}</span>
+                  <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full border border-amber-300/40 font-mono text-[10px] text-amber-200">{i + 1}</span>
                   <CiteText text={`${x.step} ${x.cite || ""}`} onCite={focus} />
                 </li>
               ))}
@@ -135,8 +135,8 @@ export default function Report({ data, id = "rep" }) {
         <Block icon={ListChecks} title="Your next steps" i={5}>
           <div className="space-y-2">
             {r.next_steps.map((x, i) => (
-              <label key={i} className={`flex cursor-pointer gap-3 rounded-xl border p-3 transition ${done[i] ? "border-cyan-300/30 bg-cyan-300/[0.06]" : "border-white/[0.07] bg-black/25 hover:border-white/15"}`}>
-                <input type="checkbox" className="mt-1 h-4 w-4 accent-cyan-300" checked={!!done[i]} onChange={() => setDone({ ...done, [i]: !done[i] })} />
+              <label key={i} className={`flex cursor-pointer gap-3 rounded-xl border p-3 transition ${done[i] ? "border-amber-300/30 bg-amber-300/[0.06]" : "border-white/[0.07] bg-black/25 hover:border-white/15"}`}>
+                <input type="checkbox" className="mt-1 h-4 w-4 accent-amber-300" checked={!!done[i]} onChange={() => setDone({ ...done, [i]: !done[i] })} />
                 <div className={`text-sm ${done[i] ? "text-slate-500 line-through" : "text-slate-200"}`}>
                   <CiteText text={`${x.step} ${x.cite || ""}`} onCite={focus} />
                   {x.general && <span className="mt-1 inline-block rounded border border-white/10 px-1.5 text-[10px] text-slate-500 no-underline">general advice</span>}
@@ -174,9 +174,9 @@ export default function Report({ data, id = "rep" }) {
       <Block icon={ExternalLink} title="Official portals" i={8}>
         <div className="grid gap-2 sm:grid-cols-2">
           {OFFICIAL_LINKS.map((l) => (
-            <a key={l.url} href={l.url} target="_blank" rel="noreferrer" className="group flex items-center justify-between rounded-xl border border-white/[0.07] bg-black/25 px-3.5 py-2.5 text-sm text-slate-200 transition hover:border-cyan-300/40">
+            <a key={l.url} href={l.url} target="_blank" rel="noreferrer" className="group flex items-center justify-between rounded-xl border border-white/[0.07] bg-black/25 px-3.5 py-2.5 text-sm text-slate-200 transition hover:border-amber-300/40">
               {l.name}
-              <ExternalLink className="h-3.5 w-3.5 text-slate-500 transition group-hover:text-cyan-300" />
+              <ExternalLink className="h-3.5 w-3.5 text-slate-500 transition group-hover:text-amber-300" />
             </a>
           ))}
         </div>

@@ -135,7 +135,7 @@ function QuickAsk({ defaultVehicle }) {
               key={s}
               type="button"
               onClick={() => ask(s)}
-              className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-slate-400 transition hover:border-cyan-300/40 hover:text-cyan-100"
+              className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-slate-400 transition hover:border-amber-300/40 hover:text-amber-100"
             >
               {s}
             </button>
@@ -164,14 +164,14 @@ function Turn({ t }) {
   return (
     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.5, ease }} className="space-y-3">
       <div className="flex justify-end">
-        <div className="max-w-[85%] rounded-2xl rounded-tr-md border border-cyan-300/20 bg-cyan-300/10 px-4 py-2.5 text-sm text-cyan-50">{t.q}</div>
+        <div className="max-w-[85%] rounded-2xl rounded-tr-md border border-amber-300/20 bg-amber-300/10 px-4 py-2.5 text-sm text-amber-50">{t.q}</div>
       </div>
       <div className="glass rounded-2xl p-5">
         {t.pending ? (
           <Loader steps={["Rewriting your question into legal terms", "Retrieving matching sections", "Writing a cited answer"]} />
         ) : r?.error ? (
           <div className="flex items-start gap-3 text-sm text-slate-300">
-            <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber-300" />
+            <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-orange-300" />
             <div>
               {r.error === "rate_limited"
                 ? `Too many requests right now — try again in ${r.retryAfter || "a few"} seconds.`
@@ -184,7 +184,7 @@ function Turn({ t }) {
           <>
             <div className="mb-3 flex flex-wrap items-center gap-2">
               {r.found ? (
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-2.5 py-1 text-xs font-medium text-cyan-100">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-300/30 bg-amber-300/10 px-2.5 py-1 text-xs font-medium text-amber-100">
                   <CheckCircle2 className="h-3.5 w-3.5" /> Found
                 </span>
               ) : (
@@ -192,7 +192,7 @@ function Turn({ t }) {
                   <CircleSlash className="h-3.5 w-3.5" /> Not in documents
                 </span>
               )}
-              {r.found && r.grounded === false && <span className="rounded-full border border-amber-300/30 px-2 py-0.5 text-[11px] text-amber-200">no citation — verify</span>}
+              {r.found && r.grounded === false && <span className="rounded-full border border-orange-300/30 px-2 py-0.5 text-[11px] text-orange-200">no citation — verify</span>}
               <span className="font-mono text-[11px] text-slate-500">
                 {r.model || "retrieval gate"} · {(r.latencyMs / 1000).toFixed(1)}s
               </span>
@@ -202,7 +202,7 @@ function Turn({ t }) {
               <div className="mt-5">
                 <div className="mb-2 flex items-center justify-between">
                   <span className="text-xs font-medium text-slate-400">{showAll ? "All retrieved chunks" : r.found ? "Cited sources" : "Closest matches (not enough to answer)"}</span>
-                  <button type="button" onClick={() => setShowAll(!showAll)} className="text-xs text-cyan-300/80 hover:text-cyan-200">
+                  <button type="button" onClick={() => setShowAll(!showAll)} className="text-xs text-amber-300/80 hover:text-amber-200">
                     {showAll ? "Show cited only" : `Show retrieval (${sources.length})`}
                   </button>
                 </div>
@@ -287,7 +287,7 @@ function SituationTab({ account, onSaved, preset }) {
               onClick={() => set("category")(k)}
               className={`rounded-xl border px-3 py-2.5 text-left text-xs leading-snug transition ${
                 form.category === k
-                  ? "border-cyan-300/60 bg-cyan-300/10 text-white shadow-[0_0_24px_-8px_rgba(34,211,238,0.8)]"
+                  ? "border-amber-300/60 bg-amber-300/10 text-white shadow-[0_0_24px_-8px_rgba(251,191,36,0.8)]"
                   : "border-white/[0.08] bg-black/25 text-slate-400 hover:border-white/20 hover:text-slate-200"
               }`}
             >
@@ -342,7 +342,7 @@ function SituationTab({ account, onSaved, preset }) {
         )}
         {err && (
           <div className="glass flex items-start gap-3 rounded-2xl p-5 text-sm text-slate-300">
-            <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber-300" />
+            <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-orange-300" />
             {err.error === "rate_limited"
               ? `Too many requests — try again in ${err.retryAfter || "a few"} seconds.`
               : err.error === "missing_key"
@@ -359,7 +359,7 @@ function SituationTab({ account, onSaved, preset }) {
 /* ------------------------------ Garage ------------------------------ */
 function Garage({ account, onEdit, onCheck }) {
   const icon = { ok: CheckCircle2, warn: Clock, bad: AlertTriangle };
-  const cls = { ok: "text-emerald-300", warn: "text-amber-300", bad: "text-rose-300" };
+  const cls = { ok: "text-emerald-300", warn: "text-orange-300", bad: "text-rose-300" };
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {account.vehicles.map((v, i) => {
@@ -376,7 +376,7 @@ function Garage({ account, onEdit, onCheck }) {
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-3">
                 <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/5">
-                  {v.type === "two-wheeler" ? <BikeIcon className="h-5 w-5 text-cyan-300" /> : <CarIcon className="h-5 w-5 text-cyan-300" />}
+                  {v.type === "two-wheeler" ? <BikeIcon className="h-5 w-5 text-amber-300" /> : <CarIcon className="h-5 w-5 text-amber-300" />}
                 </span>
                 <div>
                   <p className="font-display font-semibold text-white">{v.model || `Vehicle ${i + 1}`}</p>
@@ -398,7 +398,7 @@ function Garage({ account, onEdit, onCheck }) {
                       <I className={`h-4 w-4 ${cls[x.level]}`} /> {x.text}
                     </span>
                     {x.category && (
-                      <button type="button" onClick={() => onCheck({ category: x.category, vehicleId: v.id })} className="shrink-0 text-[11px] text-cyan-300/80 hover:text-cyan-200">
+                      <button type="button" onClick={() => onCheck({ category: x.category, vehicleId: v.id })} className="shrink-0 text-[11px] text-amber-300/80 hover:text-amber-200">
                         What does the law say? →
                       </button>
                     )}
@@ -412,7 +412,7 @@ function Garage({ account, onEdit, onCheck }) {
       <button
         type="button"
         onClick={onEdit}
-        className="grid min-h-40 place-items-center rounded-2xl border border-dashed border-white/15 text-sm text-slate-400 transition hover:border-cyan-300/40 hover:text-white"
+        className="grid min-h-40 place-items-center rounded-2xl border border-dashed border-white/15 text-sm text-slate-400 transition hover:border-amber-300/40 hover:text-white"
       >
         <span className="flex items-center gap-2">
           <Pencil className="h-4 w-4" /> Edit profile & vehicles
@@ -489,7 +489,7 @@ export default function Workspace() {
 
   return (
     <section id="ask" className="relative mx-auto max-w-6xl scroll-mt-24 px-4 py-24 sm:px-6">
-      <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-[800px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[120px]" />
+      <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-[800px] -translate-x-1/2 rounded-full bg-amber-500/10 blur-[120px]" />
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -497,7 +497,7 @@ export default function Workspace() {
         transition={{ duration: 0.8, ease }}
         className="relative mb-10"
       >
-        <p className="font-mono text-xs uppercase tracking-[0.25em] text-cyan-300/80">Your legal co-pilot</p>
+        <p className="font-mono text-xs uppercase tracking-[0.25em] text-amber-300/80">Your legal co-pilot</p>
         <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl">
           Tell us what happened. <span className="text-slate-400">We&apos;ll map it to the law.</span>
         </h2>
@@ -512,7 +512,7 @@ export default function Workspace() {
           {/* account bar */}
           <div className="glass mb-5 flex flex-wrap items-center justify-between gap-3 rounded-2xl px-4 py-3">
             <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-cyan-300 to-cyan-700 font-display font-semibold text-slate-950">
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-amber-300 to-amber-700 font-display font-semibold text-slate-950">
                 {account.profile.name.trim()[0]?.toUpperCase()}
               </span>
               <div>
@@ -548,7 +548,7 @@ export default function Workspace() {
                 {tab === k && (
                   <motion.span
                     layoutId="tab-pill"
-                    className="absolute inset-0 rounded-xl border border-cyan-300/30 bg-cyan-300/10 shadow-[0_0_30px_-10px_rgba(34,211,238,0.9)]"
+                    className="absolute inset-0 rounded-xl border border-amber-300/30 bg-amber-300/10 shadow-[0_0_30px_-10px_rgba(251,191,36,0.9)]"
                     transition={{ type: "spring", stiffness: 380, damping: 32 }}
                   />
                 )}

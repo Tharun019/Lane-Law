@@ -54,9 +54,9 @@ export default function Hero() {
         className="pointer-events-none absolute left-1/2 top-[-18%] h-[720px] w-[1100px] -translate-x-1/2 rounded-full"
         aria-hidden
       >
-        <div className="h-full w-full rounded-full bg-[radial-gradient(closest-side,rgba(34,211,238,0.28),rgba(34,211,238,0.06)_55%,transparent)]" />
+        <div className="h-full w-full rounded-full bg-[radial-gradient(closest-side,rgba(251,191,36,0.28),rgba(251,191,36,0.06)_55%,transparent)]" />
       </motion.div>
-      <div className="pointer-events-none absolute -left-40 top-1/3 h-96 w-96 rounded-full bg-cyan-500/10 blur-[120px]" />
+      <div className="pointer-events-none absolute -left-40 top-1/3 h-96 w-96 rounded-full bg-amber-500/10 blur-[120px]" />
       <div className="pointer-events-none absolute -right-40 top-1/4 h-96 w-96 rounded-full bg-slate-400/10 blur-[120px]" />
 
       {/* glass hero card */}
@@ -70,11 +70,11 @@ export default function Hero() {
           transition={{ duration: 1, ease }}
           className="glass-strong relative overflow-hidden rounded-[2rem] px-6 py-12 sm:px-12 sm:py-16"
         >
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent" />
-          <div className="pointer-events-none absolute -top-24 right-[-10%] h-64 w-64 rounded-full bg-cyan-400/20 blur-3xl" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-300/60 to-transparent" />
+          <div className="pointer-events-none absolute -top-24 right-[-10%] h-64 w-64 rounded-full bg-amber-400/20 blur-3xl" />
 
-          <motion.div {...fadeUp(0.15)} className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-cyan-300/20 bg-cyan-400/[0.07] px-3.5 py-1.5 text-xs font-medium tracking-wide text-cyan-100/90">
-            <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-cyan-300" />
+          <motion.div {...fadeUp(0.15)} className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-amber-300/20 bg-amber-400/[0.07] px-3.5 py-1.5 text-xs font-medium tracking-wide text-amber-100/90">
+            <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-amber-300" />
             Retrieval-Augmented · Motor Vehicles Act, India
           </motion.div>
 
@@ -94,7 +94,7 @@ export default function Hero() {
                   variants={word}
                   initial="hidden"
                   animate="show"
-                  className="text-gradient mr-[0.24em] inline-block drop-shadow-[0_0_30px_rgba(34,211,238,0.35)]"
+                  className="text-gradient mr-[0.24em] inline-block drop-shadow-[0_0_30px_rgba(251,191,36,0.35)]"
                 >
                   {w}
                 </motion.span>
@@ -111,19 +111,19 @@ export default function Hero() {
           <motion.div {...fadeUp(1.4)} className="mt-9 flex flex-wrap items-center gap-3">
             <a
               href="#ask"
-              className="glow-cyan group inline-flex items-center gap-2 rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+              className="glow-accent group inline-flex items-center gap-2 rounded-full bg-amber-300 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-200"
             >
               Ask Lane Law
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
             </a>
             <a
               href="#how"
-              className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-6 py-3 text-sm font-medium text-slate-200 backdrop-blur transition hover:border-cyan-300/40 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-6 py-3 text-sm font-medium text-slate-200 backdrop-blur transition hover:border-amber-300/40 hover:text-white"
             >
               How it works
             </a>
             <span className="ml-1 inline-flex items-center gap-1.5 text-xs text-slate-400">
-              <ShieldCheck className="h-3.5 w-3.5 text-cyan-300/80" /> Says &ldquo;I don&apos;t know&rdquo; when the law doesn&apos;t say
+              <ShieldCheck className="h-3.5 w-3.5 text-amber-300/80" /> Says &ldquo;I don&apos;t know&rdquo; when the law doesn&apos;t say
             </span>
           </motion.div>
 
@@ -153,9 +153,9 @@ export default function Hero() {
         style={{ y: roadY, top: "calc(100svh - 12rem)" }}
         aria-hidden
       >
-        <div className="road absolute inset-x-0 bottom-0 h-40 md:h-44 shadow-[0_-30px_80px_-20px_rgba(34,211,238,0.15)]">
+        <div className="road absolute inset-x-0 bottom-0 h-40 md:h-44 shadow-[0_-30px_80px_-20px_rgba(251,191,36,0.15)]">
           <div className="lane-dash absolute inset-x-0 top-1/2 h-[3px] -translate-y-1/2" />
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/40 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-300/40 to-transparent" />
           {/* far lane: bike */}
           <div className="drive" style={{ bottom: "58%", animationDuration: "7.5s", animationDelay: "0.4s" }}>
             <Bike width={150} />

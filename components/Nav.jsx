@@ -17,7 +17,7 @@ export default function Nav() {
     <>
       <motion.div
         style={{ scaleX: scrollYProgress }}
-        className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-cyan-500 via-cyan-300 to-sky-200 shadow-[0_0_12px_rgba(34,211,238,0.8)]"
+        className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-amber-500 via-amber-300 to-yellow-100 shadow-[0_0_12px_rgba(251,191,36,0.8)]"
       />
       <motion.header
         initial={{ y: -40, opacity: 0 }}
@@ -30,13 +30,13 @@ export default function Nav() {
           className="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border px-4 py-2.5 backdrop-blur-xl"
         >
           <a href="#top" className="flex items-center gap-2.5">
-            <span className="relative grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-br from-cyan-300 to-cyan-600 shadow-[0_0_24px_-4px_rgba(34,211,238,0.8)]">
-              <svg viewBox="0 0 24 24" className="h-4.5 w-4.5" fill="none" stroke="#04131a" strokeWidth="2.4" strokeLinecap="round">
+            <span className="relative grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-br from-amber-300 to-amber-600 shadow-[0_0_24px_-4px_rgba(251,191,36,0.8)]">
+              <svg viewBox="0 0 24 24" className="h-4.5 w-4.5" fill="none" stroke="#1a1203" strokeWidth="2.4" strokeLinecap="round">
                 <path d="M6 21 L10 3 M18 21 L14 3 M12 7v2 M12 12v2 M12 17v2" />
               </svg>
             </span>
             <span className="font-display text-[15px] font-semibold tracking-tight text-white">
-              Lane Law <span className="text-cyan-300">AI</span>
+              Lane Law <span className="text-amber-300">AI</span>
             </span>
           </a>
           <div className="hidden items-center gap-1 md:flex">
@@ -48,7 +48,7 @@ export default function Nav() {
           </div>
           <a
             href="#ask"
-            className="rounded-xl border border-cyan-300/30 bg-cyan-300/10 px-3.5 py-1.5 text-sm font-medium text-cyan-100 transition hover:bg-cyan-300/20"
+            className="rounded-xl border border-amber-300/30 bg-amber-300/10 px-3.5 py-1.5 text-sm font-medium text-amber-100 transition hover:bg-amber-300/20"
           >
             Try it
           </a>

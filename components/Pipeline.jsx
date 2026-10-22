@@ -50,7 +50,7 @@ export default function Pipeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, ease }}
-            className="font-mono text-xs uppercase tracking-[0.25em] text-cyan-300/80"
+            className="font-mono text-xs uppercase tracking-[0.25em] text-amber-300/80"
           >
             The pipeline
           </motion.p>
@@ -81,7 +81,7 @@ export default function Pipeline() {
           <div className="absolute left-[11px] top-2 bottom-2 w-px bg-white/[0.07] sm:left-[15px]" />
           <motion.div
             style={{ scaleY: line }}
-            className="absolute left-[11px] top-2 bottom-2 w-px origin-top bg-gradient-to-b from-cyan-300 via-cyan-400 to-cyan-600 shadow-[0_0_14px_rgba(34,211,238,0.9)] sm:left-[15px]"
+            className="absolute left-[11px] top-2 bottom-2 w-px origin-top bg-gradient-to-b from-amber-300 via-amber-400 to-amber-600 shadow-[0_0_14px_rgba(251,191,36,0.9)] sm:left-[15px]"
           />
           <div className="space-y-6">
             {steps.map((s, i) => (
@@ -93,21 +93,21 @@ export default function Pipeline() {
                 transition={{ duration: 0.85, ease, delay: i * 0.05 }}
                 className="group relative"
               >
-                <span className="absolute -left-8 top-7 grid h-6 w-6 place-items-center rounded-full border border-cyan-300/50 bg-[#050607] shadow-[0_0_16px_rgba(34,211,238,0.6)] sm:-left-10 sm:h-8 sm:w-8">
-                  <span className="h-2 w-2 rounded-full bg-cyan-300" />
+                <span className="absolute -left-8 top-7 grid h-6 w-6 place-items-center rounded-full border border-amber-300/50 bg-[#050607] shadow-[0_0_16px_rgba(251,191,36,0.6)] sm:-left-10 sm:h-8 sm:w-8">
+                  <span className="h-2 w-2 rounded-full bg-amber-300" />
                 </span>
-                <div className="glass rounded-3xl p-6 transition duration-500 group-hover:border-cyan-300/25 group-hover:shadow-[0_30px_80px_-30px_rgba(34,211,238,0.35)] sm:p-7">
+                <div className="glass rounded-3xl p-6 transition duration-500 group-hover:border-amber-300/25 group-hover:shadow-[0_30px_80px_-30px_rgba(251,191,36,0.35)] sm:p-7">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex items-center gap-3">
                       <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent">
-                        <s.icon className="h-5 w-5 text-cyan-300" />
+                        <s.icon className="h-5 w-5 text-amber-300" />
                       </span>
                       <h3 className="font-display text-xl font-semibold text-white">{s.title}</h3>
                     </div>
                     <span className="font-mono text-sm text-slate-500">{s.n}</span>
                   </div>
                   <p className="mt-4 leading-relaxed text-slate-300/90">{s.body}</p>
-                  <p className="mt-4 border-t border-white/[0.06] pt-3 font-mono text-xs text-cyan-200/70">{s.detail}</p>
+                  <p className="mt-4 border-t border-white/[0.06] pt-3 font-mono text-xs text-amber-200/70">{s.detail}</p>
                 </div>
               </motion.div>
             ))}

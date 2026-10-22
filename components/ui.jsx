@@ -37,7 +37,7 @@ export function Field({ label, hint, children }) {
 }
 
 export const inputCls =
-  "w-full rounded-xl border border-white/10 bg-black/40 px-3.5 py-2.5 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-cyan-300/50 focus:shadow-[0_0_0_4px_rgba(34,211,238,0.12)]";
+  "w-full rounded-xl border border-white/10 bg-black/40 px-3.5 py-2.5 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-amber-300/50 focus:shadow-[0_0_0_4px_rgba(251,191,36,0.12)]";
 
 export function Segmented({ value, onChange, options }) {
   return (
@@ -54,7 +54,7 @@ export function Segmented({ value, onChange, options }) {
           {value === v && (
             <motion.span
               layoutId={`seg-${options.map((o) => o[0]).join("")}`}
-              className="absolute inset-0 rounded-lg bg-cyan-300 shadow-[0_0_20px_-4px_rgba(34,211,238,0.9)]"
+              className="absolute inset-0 rounded-lg bg-amber-300 shadow-[0_0_20px_-4px_rgba(251,191,36,0.9)]"
               transition={{ type: "spring", stiffness: 400, damping: 32 }}
             />
           )}
@@ -71,8 +71,8 @@ export function Segmented({ value, onChange, options }) {
 export function Button({ children, variant = "primary", className = "", ...props }) {
   const base = "inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50";
   const styles = {
-    primary: "bg-cyan-300 text-slate-950 hover:bg-cyan-200 shadow-[0_10px_30px_-10px_rgba(34,211,238,0.8)]",
-    ghost: "border border-white/12 bg-white/[0.04] text-slate-200 hover:border-cyan-300/40 hover:text-white",
+    primary: "bg-amber-300 text-slate-950 hover:bg-amber-200 shadow-[0_10px_30px_-10px_rgba(251,191,36,0.8)]",
+    ghost: "border border-white/12 bg-white/[0.04] text-slate-200 hover:border-amber-300/40 hover:text-white",
     danger: "border border-rose-400/30 bg-rose-400/10 text-rose-200 hover:bg-rose-400/20",
   };
   return (
@@ -99,7 +99,7 @@ export function CiteText({ text, onCite, className = "" }) {
                 key={i}
                 type="button"
                 onClick={() => onCite?.(m[1])}
-                className="mx-0.5 inline-flex -translate-y-px items-center rounded-md border border-cyan-300/30 bg-cyan-300/10 px-1.5 py-px align-middle font-mono text-[10px] font-medium text-cyan-200 transition hover:bg-cyan-300/25"
+                className="mx-0.5 inline-flex -translate-y-px items-center rounded-md border border-amber-300/30 bg-amber-300/10 px-1.5 py-px align-middle font-mono text-[10px] font-medium text-amber-200 transition hover:bg-amber-300/25"
               >
                 {m[1]}
               </button>
@@ -109,7 +109,7 @@ export function CiteText({ text, onCite, className = "" }) {
         });
         return bullet ? (
           <div key={li} className="flex gap-2">
-            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300/70" />
+            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-300/70" />
             <p>{content}</p>
           </div>
         ) : (
@@ -129,17 +129,17 @@ export function SourceCard({ s, highlighted, domId }) {
     <motion.div
       id={domId}
       layout
-      animate={highlighted ? { boxShadow: "0 0 0 1px rgba(34,211,238,0.7), 0 0 40px -6px rgba(34,211,238,0.6)" } : { boxShadow: "0 0 0 1px rgba(255,255,255,0)" }}
+      animate={highlighted ? { boxShadow: "0 0 0 1px rgba(251,191,36,0.7), 0 0 40px -6px rgba(251,191,36,0.6)" } : { boxShadow: "0 0 0 1px rgba(255,255,255,0)" }}
       className="rounded-2xl border border-white/[0.08] bg-black/35 p-4"
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-1.5">
-            <span className="rounded-md bg-cyan-300/15 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-cyan-200">{s.tag}</span>
+            <span className="rounded-md bg-amber-300/15 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-amber-200">{s.tag}</span>
             <span className="text-[11px] font-medium text-slate-300">{docShort}</span>
             <span className="text-[11px] text-slate-500">· {where}</span>
             {s.doc === "pen2019" && <span className="rounded-md border border-emerald-300/25 bg-emerald-300/10 px-1.5 py-0.5 text-[10px] text-emerald-200">Current fine</span>}
-            {s.doc === "mva1988" && <span className="rounded-md border border-amber-300/20 bg-amber-300/10 px-1.5 py-0.5 text-[10px] text-amber-200/90">1988 text</span>}
+            {s.doc === "mva1988" && <span className="rounded-md border border-white/15 bg-white/5 px-1.5 py-0.5 text-[10px] text-slate-300">1988 text</span>}
           </div>
           <p className="mt-1.5 text-sm font-medium leading-snug text-white">{s.title}</p>
         </div>
@@ -147,7 +147,7 @@ export function SourceCard({ s, highlighted, domId }) {
           <div className="w-16 shrink-0 text-right">
             <div className="font-mono text-[10px] text-slate-500">match</div>
             <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-white/10">
-              <div className="h-full rounded-full bg-cyan-300" style={{ width: `${Math.max(8, Math.min(100, (s.relative ?? s.score) * 100))}%` }} />
+              <div className="h-full rounded-full bg-amber-300" style={{ width: `${Math.max(8, Math.min(100, (s.relative ?? s.score) * 100))}%` }} />
             </div>
           </div>
         ) : null}
@@ -169,7 +169,7 @@ export function SourceCard({ s, highlighted, domId }) {
           </button>
         )}
         {s.url && (
-          <a href={s.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[11px] text-cyan-300/80 hover:text-cyan-200">
+          <a href={s.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[11px] text-amber-300/80 hover:text-amber-200">
             Open source <ExternalLink className="h-3 w-3" />
           </a>
         )}
@@ -199,8 +199,8 @@ export function Loader({ steps }) {
           transition={{ delay: i * 0.6 }}
           className="flex items-center gap-3"
         >
-          <span className="relative h-2 w-2 rounded-full bg-cyan-300">
-            <span className="absolute inset-0 animate-ping rounded-full bg-cyan-300" />
+          <span className="relative h-2 w-2 rounded-full bg-amber-300">
+            <span className="absolute inset-0 animate-ping rounded-full bg-amber-300" />
           </span>
           <span className="text-sm text-slate-300">{s}</span>
         </motion.div>

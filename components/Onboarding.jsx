@@ -103,14 +103,14 @@ export default function Onboarding({ initial, onDone }) {
 
   return (
     <div className="glass-strong relative overflow-hidden rounded-[1.75rem] p-5 sm:p-8">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/50 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-300/50 to-transparent" />
       {/* stepper */}
       <div className="mb-8 flex items-center gap-3">
         {["Your account", "Your vehicles"].map((l, i) => (
           <div key={l} className="flex items-center gap-3">
             <span
               className={`grid h-7 w-7 place-items-center rounded-full border font-mono text-xs transition ${
-                step >= i ? "border-cyan-300 bg-cyan-300 text-slate-950 shadow-[0_0_18px_-2px_rgba(34,211,238,0.8)]" : "border-white/15 text-slate-500"
+                step >= i ? "border-amber-300 bg-amber-300 text-slate-950 shadow-[0_0_18px_-2px_rgba(251,191,36,0.8)]" : "border-white/15 text-slate-500"
               }`}
             >
               {i + 1}
@@ -126,7 +126,7 @@ export default function Onboarding({ initial, onDone }) {
           <motion.div key="acc" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -30 }} transition={{ duration: 0.45, ease }}>
             <div className="mb-6 flex items-center gap-3">
               <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/5">
-                <UserRound className="h-5 w-5 text-cyan-300" />
+                <UserRound className="h-5 w-5 text-amber-300" />
               </span>
               <div>
                 <h3 className="font-display text-xl font-semibold text-white">Create your Lane Law profile</h3>
@@ -160,7 +160,7 @@ export default function Onboarding({ initial, onDone }) {
               </Field>
             </div>
             <label className="mt-6 flex cursor-pointer items-start gap-3 rounded-xl border border-white/[0.07] bg-black/25 p-3.5">
-              <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} className="mt-0.5 h-4 w-4 accent-cyan-300" />
+              <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} className="mt-0.5 h-4 w-4 accent-amber-300" />
               <span className="text-xs leading-relaxed text-slate-400">
                 I understand Lane Law AI explains the law from official documents and is <strong className="text-slate-200">not legal advice</strong>. My
                 details stay in this browser and are only sent with a question to generate an answer. Don&apos;t enter Aadhaar or licence numbers.
@@ -176,7 +176,7 @@ export default function Onboarding({ initial, onDone }) {
           <motion.div key="veh" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -30 }} transition={{ duration: 0.45, ease }}>
             <div className="mb-6 flex items-center gap-3">
               <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/5">
-                <ShieldCheck className="h-5 w-5 text-cyan-300" />
+                <ShieldCheck className="h-5 w-5 text-amber-300" />
               </span>
               <div>
                 <h3 className="font-display text-xl font-semibold text-white">Add your vehicles</h3>
@@ -199,7 +199,7 @@ export default function Onboarding({ initial, onDone }) {
             <button
               type="button"
               onClick={() => setVehicles([...vehicles, emptyVehicle()])}
-              className="mt-4 inline-flex items-center gap-2 rounded-xl border border-dashed border-white/15 px-4 py-2.5 text-sm text-slate-300 transition hover:border-cyan-300/40 hover:text-white"
+              className="mt-4 inline-flex items-center gap-2 rounded-xl border border-dashed border-white/15 px-4 py-2.5 text-sm text-slate-300 transition hover:border-amber-300/40 hover:text-white"
             >
               <Plus className="h-4 w-4" /> Add another vehicle
             </button>
